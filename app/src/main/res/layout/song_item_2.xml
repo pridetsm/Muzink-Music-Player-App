@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+        <Button
+            android:id="@+id/more_menu"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/song_title"
+            android:background="@drawable/ic_more_vert_black_24dp"/>
+    <TextView
+        android:paddingRight="5dp"
+        android:maxLength="8"
+        android:id="@+id/track_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track 01"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+        <TextView
+            android:paddingRight="5dp"
+            android:maxLength="4"
+            android:id="@+id/song_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.25"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/more_menu"/>
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Temporary song title"
+            android:textColor="#b0b0b0"
+            android:maxLength="@android:integer/status_bar_notification_info_maxnum"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/track_no"
+
+            />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

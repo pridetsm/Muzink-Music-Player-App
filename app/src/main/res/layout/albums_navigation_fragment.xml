@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Button
+        android:id="@+id/back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_arrow_back_black_24dp"
+        android:layout_gravity="left"
+        />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/blackLayout"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="#000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:id="@+id/blackLayoutfirst"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="@drawable/gradient_drawable"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:background="#888888"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/album_title_nav"
+            android:layout_width="265dp"
+            android:layout_height="wrap_content"
+            android:text="Album title"
+            android:textColor="#ffffff"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:maxLines="1"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+            />
+            <TextView
+                android:id="@+id/album_artist_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album artist"
+            android:textColor="#ffffff"
+                android:textSize="13dp"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/album_title_nav"
+            android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+            />
+            <TextView
+                android:id="@+id/album_year_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Album year"
+                android:textSize="12dp"
+                android:drawablePadding="3dp"
+                android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+                android:textColor="#ffffff"
+
+                android:textAppearance="?attr/textAppearanceListItem"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/album_artist_nav"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="70dp"
+                android:id="@+id/buttons_layout"
+                android:background="@drawable/button_container_drawable"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/album_year_nav"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <Button
+                    android:id="@+id/album_play_button"
+                    android:layout_width="12dp"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_play_play_button"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/shuffle_button"
+                android:layout_width="15dp"
+                android:layout_height="17dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shuffle_icon_init"
+                app:layout_constraintRight_toRightOf="parent"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:alpha="0.3"
+                    android:src="@drawable/dark_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.3" />
+
+                <ImageView
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:alpha="0.4"
+                    android:src="@drawable/dark_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.3"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4" />
+
+                <ImageView
+                    android:id="@+id/first_artist_img_nav"
+                    android:layout_width="105dp"
+                    android:layout_height="105dp"
+                    android:src="@drawable/dark_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.4"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/album_songs_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/song_item"/>
+        </FrameLayout>
+    </LinearLayout>
+    </LinearLayout>
+
+

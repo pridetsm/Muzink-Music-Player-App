@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="3dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="3dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp">
+        <Button
+            android:id="@+id/more_menu"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/song_title"
+            android:background="@drawable/ic_more_vert_black_24dp"/>
+        <TextView
+            android:paddingRight="5dp"
+            android:maxLength="4"
+            android:id="@+id/song_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.25"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@id/song_album"
+            app:layout_constraintRight_toRightOf="parent"/>
+    <ImageView
+        android:padding="3dp"
+        android:id="@+id/artist_img"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@drawable/song_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="Temporary song title"
+            android:textColor="#b0b0b0"
+            android:maxLength="@android:integer/status_bar_notification_info_maxnum"
+            android:textSize="15dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toRightOf="@id/artist_img"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:id="@+id/artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temporary song artist"
+            android:textColor="#ff000000"
+            android:textSize="12dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toLeftOf="@id/song_title"
+            app:layout_constraintTop_toBottomOf="@id/song_title"
+            />
+
+        <TextView
+            android:id="@+id/song_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Album name"
+            android:textColor="#ff000000"
+            android:textSize="12dp"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintLeft_toLeftOf="@id/song_title"
+            app:layout_constraintTop_toBottomOf="@id/artist_name"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

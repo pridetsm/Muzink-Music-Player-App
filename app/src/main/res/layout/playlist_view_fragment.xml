@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" App playlists"
+        android:textSize="15sp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/app_playlist_container"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/allsongs_label"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  All songs"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="15sp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="#888888"
+        android:drawableLeft="@drawable/ic_all_songs_playlist"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+    <TextView
+        android:id="@+id/favourites"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Favourites"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="15sp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="#888888"
+        android:drawableLeft="@drawable/ic_untitled_5"
+        app:layout_constraintTop_toBottomOf="@id/allsongs_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" My playlists"
+        android:textSize="15sp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="@id/label1"
+        app:layout_constraintBottom_toBottomOf="@id/card1"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/playlist_view_fragment_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+
+                tools:listitem="@layout/playlist_item_layout" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add_playlist"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:adjustViewBounds="true"
+           android:backgroundTint="@color/colorPrimaryDark"
+            android:src="@drawable/ic_add_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@id/card2"
+            app:layout_constraintRight_toRightOf="@id/fab_container"
+         app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            tools:targetApi="lollipop"
+            app:fabCustomSize="30dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
